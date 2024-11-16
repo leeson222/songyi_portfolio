@@ -1,0 +1,107 @@
+@import "util.scss";
+
+// ********** 반응형 ***********
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tabletToMobile - 1px}) {
+    @content;
+  }
+}
+
+// 모바일에서 태블릿 : 최소 '모바일에서 태블릿'사이즈부터 ~ 최대 '태블릿'사이즈까지
+@mixin tabletToMobile {
+  @media (min-width: #{$breakpoint-tabletToMobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+// 태블릿 : 최소'태블릿'사이즈부터 ~ 최대 '태블릿에서 노트북'사이즈까지
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-laptopToTablet - 1px}) {
+    @content;
+  }
+}
+
+// 태블릿에서 노트북 : 최소 '태블릿에서 노트북'사이즈부터 ~ 최대 '노트북'사이즈까지
+@mixin laptopToTablet {
+  @media (min-width: #{$breakpoint-laptopToTablet}) and (max-width: #{$breakpoint-laptop - 1px}) {
+    @content;
+  }
+}
+
+// 노트북 : 최소 '노트북'사이즈부터 ~ 최대 '노트북에서 데스크탑'사이즈까지
+@mixin laptop {
+  @media (min-width: #{$breakpoint-laptop}) and (max-width: #{$breakpoint-desktopToLaptop - 1px}) {
+    @content;
+  }
+}
+
+// 노트북 이하로 전부 다
+@mixin belowLaptop {
+  @media screen and (max-width: #{$breakpoint-desktopToLaptop}) {
+    @content;
+  }
+}
+
+// 노트북에서 데스크탑 : 최소 '노트북에서 데스크탑'사이즈부터 ~ 최대 '데스크탑'사이즈까지 
+@mixin desktopToLaptop {
+  @media (min-width: #{$breakpoint-desktopToLaptop}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+// 데스크탑 : 최소 '데스크탑'사이즈
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+// ********** 변수 ***********
+
+// inner size
+$inner-size : 1300px;
+
+// font color
+$main-text-color : #3b3b3b;
+$point-text-color : #3367d1;
+$margin-center : 0 auto;
+
+// container padding
+$containerPadding : 170px 0;
+
+// header bg
+$header-bg : rgba(255,255,255,0.7);
+
+// txt size
+$h1-size : 3rem;
+$h2-size : 2.8rem;
+$h3-size : 2.6rem;
+$default-size : 1.2vw;
+$tit-margin-bottom : 5rem;
+
+// gnb w size
+$gnbWidth : 90%;
+
+// border size
+$borderSize: 1px solid rgba(255,255,255,0.2);
+
+// mixin
+@mixin displaySize($displayWidthSize, $displayHeightSize) {
+  width: $displayWidthSize; height: $displayHeightSize;
+}
+
+@mixin gnbWidth {
+  width: $gnbWidth; min-width: $gnbWidth; max-width: $gnbWidth;
+}
+@mixin innerWidth ($size) {
+  width: $size; min-width: $size; max-width: $size; margin: $margin-center;
+}
+@mixin fontSize($lineHeightSize: 8vw) {
+  font: {
+    size: $default-size;
+    weight: 400;
+  }
+  color: $main-text-color;
+  line-height: $lineHeightSize;
+  margin: 1rem auto 1rem;
+}

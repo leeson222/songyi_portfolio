@@ -1,0 +1,14 @@
+/* reset */
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); word-break: keep-all !important; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-font-smoothing:antialiased; } 
+button { background: none; border: 0; background-color: rgba(0, 0, 0, 0); } 
+em , address { font-style: normal; } 
+a { text-decoration: none; color: inherit; } 
+ul , li { list-style: none; } 
+input { background-color: rgba(0, 0, 0, 0); } 
+strong { display: block; }
+em { display: inline-block; }
+ h2 em { font-weight: 900; } 
+p em, strong em, span em, b em, li em { font-weight: 700; } 
+/* reset */
+
+body { overflow-x: hidden; --bg-color: #fff; background-color: var(--bg-color); }

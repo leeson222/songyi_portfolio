@@ -1,0 +1,29 @@
+* {letter-spacing: -0.01rem;}
+body::-webkit-scrollbar {width: 5px;}
+body::-webkit-scrollbar-thumb {background-color: #006eff;}
+body::-webkit-scrollbar-track {background-color: #000;}
+p em, strong em, span em, b em, li em, h2, h3, h4, p, a, button, em, span, b { letter-spacing: -0.02em; } 
+section { height: 100vh; }
+.inner { @include innerWidth(1300px); height: 100vh; padding: 50px 0; } 
+@include belowLaptop {
+  .inner { @include innerWidth(100%); } 
+}
+.main-sec {
+  position: relative; width: 100%;
+  font : {
+    family: 'Montserrat', 'Boogy_Brut_Poster', 'pretendard';
+    weight: 400;
+  }
+  .flex-perpendicular { display: flex; flex-direction: column; justify-content: center; }
+  .flexLine { display: flex; justify-content: space-between; align-items: center; }
+}
+
+.h2 { margin-bottom: $tit-margin-bottom; font-size: $h2-size; }
+.tit { font-size: $default-size * 1.2; }
+.txtCenter { text-align: center; }
+.desc-wrap {
+    .desc + .desc { margin-top: 20px; }
+}
+.desc { font-size: $default-size; }
+
+.fadeIn { opacity: 0; }

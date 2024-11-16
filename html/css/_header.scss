@@ -1,0 +1,38 @@
+#header { 
+  overflow: scroll; display: flex; justify-content: space-between; align-items: center; position: fixed; z-index: 1000; width: 100%; padding: 30px; color: #fff; mix-blend-mode: difference;
+  font: {
+    family: 'Montserrat', 'Boogy_Brut_Poster', 'pretendard';
+    size: $default-size * 0.8;
+    weight: 300;
+  }
+  transition: all .3s;
+  .logo { 
+    font: {
+      family: 'Lobster' !important;
+      size: $default-size * 1.2;
+    }
+  }
+}
+
+/* gnb */
+.nav { 
+  ul { 
+    display: flex; align-items: center; justify-content: end;
+    li {
+      overflow: hidden; position: relative;
+      a { 
+        transition: all .3s;
+        &:hover { letter-spacing: 3px; }
+      }
+    }
+    li + li { margin-left: 20px; }
+  }
+}
+
+/* tnb */
+.tnb { 
+  flex-basis: 30%; text-align: right;
+  .tnbWrap {
+    display: flex; justify-content: end; align-items: center; gap: 20px;
+  }
+ } 
