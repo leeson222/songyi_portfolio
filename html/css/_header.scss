@@ -1,15 +1,15 @@
 #header { 
-  overflow: scroll; display: flex; justify-content: space-between; align-items: center; position: fixed; z-index: 1000; width: 100%; padding: 30px; color: #fff; mix-blend-mode: difference;
+  overflow: hidden; display: flex; justify-content: space-between; align-items: center; position: fixed; z-index: 1000; width: 100%; padding: 30px; color: #fff; mix-blend-mode: difference;
   font: {
     family: 'Montserrat', 'Boogy_Brut_Poster', 'pretendard';
-    size: $default-size * 0.8;
+    size: $default-size;
     weight: 300;
   }
   transition: all .3s;
   .logo { 
     font: {
       family: 'Lobster' !important;
-      size: $default-size * 1.2;
+      size: $default-size * 1.6;
     }
   }
 }

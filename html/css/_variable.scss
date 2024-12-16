@@ -1,4 +1,24 @@
-@import "util.scss";
+// 모바일
+$breakpoint-mobile: 335px;
+
+// 모바일에서 태블릿
+$breakpoint-tabletToMobile: 535px;
+
+// 태블릿
+$breakpoint-tablet: 720px;
+
+// 태블릿에서 노트북
+$breakpoint-laptopToTablet: 960px;
+
+// 노트북
+$breakpoint-laptop: 1024px;
+
+// 노트북에서 데스크탑
+$breakpoint-desktopToLaptop: 1300px;
+
+// 데스크탑
+$breakpoint-desktop: 1800px;
+
 
 // ********** 반응형 ***********
 @mixin mobile {
@@ -76,7 +96,7 @@ $header-bg : rgba(255,255,255,0.7);
 $h1-size : 3rem;
 $h2-size : 2.8rem;
 $h3-size : 2.6rem;
-$default-size : 1.2vw;
+$default-size : 1.6rem;
 $tit-margin-bottom : 5rem;
 
 // gnb w size

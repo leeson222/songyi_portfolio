@@ -39,18 +39,18 @@ section {
     margin: 0 auto;
   }
 }
-.mainSec {
+.main-sec {
   position: relative;
   width: 100%;
   font-family: "Montserrat", "Boogy_Brut_Poster", "pretendard";
   font-weight: 400;
 }
-.mainSec .flex-perpendicular {
+.main-sec .flex-perpendicular {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.mainSec .flexLine {
+.main-sec .flexLine {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +62,7 @@ section {
 }
 
 .tit {
-  font-size: 1.44vw;
+  font-size: 1.92rem;
 }
 
 .txtCenter {
@@ -74,7 +74,7 @@ section {
 }
 
 .desc {
-  font-size: 1.2vw;
+  font-size: 1.6rem;
 }
 
 .fadeIn {
@@ -93,13 +93,13 @@ section {
   color: #fff;
   mix-blend-mode: difference;
   font-family: "Montserrat", "Boogy_Brut_Poster", "pretendard";
-  font-size: 0.96vw;
+  font-size: 1.6rem;
   font-weight: 300;
   transition: all 0.3s;
 }
 #header .logo {
   font-family: "Lobster" !important;
-  font-size: 1.44vw;
+  font-size: 2.56rem;
 }
 
 /* gnb */
@@ -170,6 +170,17 @@ section {
 .mainSec1 .visualTxt svg:last-child {
   transform: translate(18vw, 0px);
 }
+.mainSec1 .visualTxt-small {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100px);
+  opacity: 0;
+  mix-blend-mode: difference;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+}
 .mainSec1 .visualBg-mp4 {
   position: absolute;
   left: 0;
@@ -238,6 +249,8 @@ section {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  width: 1300px;
+  margin: 0 auto;
   padding: 130px 20px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -249,8 +262,11 @@ section {
   width: 90%;
   margin-bottom: 20px;
 }
+.introduce .inner .introduce-left .introduce-txt p {
+  font-size: 1.6rem;
+}
 .introduce .inner .introduce-left .introduce-txt p .introduce-txt-hello {
-  font-size: 1.44vw;
+  font-size: 1.92rem;
 }
 .introduce .inner .introduce-left img {
   display: block;
@@ -271,10 +287,11 @@ section {
 .introduce .inner .introduceRight .introduce-txt strong {
   display: block;
   margin-bottom: 20px;
-  font-size: 1.44vw;
+  font-size: 1.92rem;
 }
 .introduce .inner .introduceRight .introduce-txt p {
-  letter-spacing: 1px;
+  font-size: 1.76rem;
+  letter-spacing: -1px;
   line-height: 23px;
   color: #cbcbcb;
 }
@@ -333,9 +350,9 @@ section {
   background: url(../img/portfolio-img01.png) center center;
 }
 .portfolioIntro .portfolioBg .portfolioBg-wrap:nth-child(2) .portfolioBg-bg:nth-child(2) strong {
-  font-size: 3.6vw;
+  font-size: 4.8rem;
   font-weight: 600;
-  font-color: #fff;
+  color: #fff;
 }
 .portfolioIntro .portfolioBg .portfolioBg-wrap:nth-child(2) .portfolioBg-bg:nth-child(3) {
   background: url(../img/portfolio-img06.png) center center;
@@ -351,59 +368,72 @@ section {
 }
 
 .portfolioContents {
-  overflow: hidden;
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
 .portfolioContents .portfolioWrap {
   position: absolute;
   left: 0;
-  bottom: -300vh;
+  top: 300vh;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents {
+.portfolioContents .portfolioWrap .portfolio-inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20rem 10rem;
+  width: 1300px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 200px;
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioLeftBox {
-  overflow: hidden;
-  width: 49%;
-  height: 500px;
-  border-radius: 15px;
-  background-color: #fff;
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox {
+  position: relative;
+  width: calc((100% - 20rem) / 2);
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioLeftBox .portfolioLeftBox-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a {
+  display: block;
+}
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a img {
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
-  height: 9%;
-  padding: 0 15px;
-  background-color: #333;
+  border-radius: 30px;
+  border: 1px solid #ddd;
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioLeftBox .portfolioLeftBox-header span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  background-color: #f90;
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a::before {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  top: 4rem;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #ddd;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioLeftBox .portfolioLeftBox-header span:first-child {
-  background-color: rgb(189, 30, 46);
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a .portfolioBox-txt-top {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioLeftBox .portfolioLeftBox-header span:nth-child(2) {
-  background-color: rgb(212, 191, 58);
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a .portfolioBox-txt-top strong {
+  font-size: 3rem;
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioLeftBox .portfolioLeftBox-header span:last-child {
-  background-color: rgb(58, 197, 48);
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a .portfolioBox-txt-top p {
+  font-size: 2.2rem;
+  color: #999;
+  line-height: 3.6rem;
 }
-.portfolioContents .portfolioWrap .portfolioSlide-contents .portfolioRightBox {
-  width: 49%;
+.portfolioContents .portfolioWrap .portfolio-inner .portfolioBox:nth-child(even) {
+  transform: translate(0, 200px);
 }
 
 /* sec4 */
@@ -449,4 +479,4 @@ section {
     transform: rotate(-90deg);
     vertical-align: middle;
   }
-}/*# sourceMappingURL=style.css.map */
+}
