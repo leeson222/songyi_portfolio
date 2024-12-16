@@ -14,7 +14,20 @@ body::-webkit-scrollbar-track {
   background-color: #000;
 }
 
-p em, strong em, span em, b em, li em, h2, h3, h4, p, a, button, em, span, b {
+p em,
+strong em,
+span em,
+b em,
+li em,
+h2,
+h3,
+h4,
+p,
+a,
+button,
+em,
+span,
+b {
   letter-spacing: -0.02em;
 }
 
@@ -394,7 +407,10 @@ section {
 }
 .portfolioContents .portfolioWrap .portfolio-inner .portfolioBox {
   position: relative;
+  z-index: 99999;
   width: calc((100% - 20rem) / 2);
+  background-color: #000;
+  transform: translateY(50px);
 }
 .portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a {
   display: block;
