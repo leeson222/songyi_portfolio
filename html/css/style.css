@@ -373,28 +373,35 @@ section {
   height: 100vh;
 }
 .portfolioContents .portfolioWrap {
+  overflow: hidden;
+  overscroll-behavior: contain;
   position: absolute;
   left: 0;
   top: 300vh;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
 .portfolioContents .portfolioWrap .portfolio-inner {
+  overflow-y: scroll;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20rem 10rem;
   width: 1300px;
-  height: auto;
-  margin: 0 auto;
+  height: 100vh;
   padding-top: 200px;
 }
 .portfolioContents .portfolioWrap .portfolio-inner .portfolioBox {
   position: relative;
   width: calc((100% - 20rem) / 2);
+  opacity: 0;
+  transform: translateY(50px);
 }
 .portfolioContents .portfolioWrap .portfolio-inner .portfolioBox a {
   display: block;
@@ -479,4 +486,4 @@ section {
     transform: rotate(-90deg);
     vertical-align: middle;
   }
-}
+}/*# sourceMappingURL=style.css.map */

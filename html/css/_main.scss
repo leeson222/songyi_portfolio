@@ -112,9 +112,9 @@
 .portfolioContents {
   position: relative; @include displaySize(100vw, 100vh);
   .portfolioWrap {
-   overflow: hidden; position: absolute; left: 0; top: 300vh; @include displaySize(100vw, auto); background-color: rgba(255,255,255,0.5); backdrop-filter: blur(6px);
+   overflow: hidden; overscroll-behavior: contain; position: absolute; left: 0; top: 300vh; @include displaySize(100vw, 100vh); background-color: rgba(255,255,255,0.5); backdrop-filter: blur(6px);
    .portfolio-inner {
-    overflow-y: scroll; display: flex; flex-wrap: wrap; justify-content: center; gap: 20rem 10rem; @include displaySize($inner-size, auto); margin: 0 auto; padding-top: 200px;
+      overflow-y: scroll; position: absolute; left: 50%; transform: translate(-50%, 0); display: flex; flex-wrap: wrap; justify-content: center; gap: 20rem 10rem; @include displaySize($inner-size, 100vh); padding-top: 200px;
       .portfolioBox {
         position: relative; width: calc((100% - 20rem) / 2); opacity: 0; transform: translateY(50px);
         a {

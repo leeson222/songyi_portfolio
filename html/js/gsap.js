@@ -137,7 +137,7 @@ window.onload = function() {
           ease: "power2.out",
           scrollTrigger: {
               trigger: box,         // 각 박스를 트리거로 사용
-              start: "top center",     
+              start: "top top+=500",     
               end: "top =+200",       // 종료 지점 (필요에 따라 설정)
               toggleActions: "play none none reverse", // 애니메이션 재생
               markers: true         // 디버깅용 마커 표시
